@@ -29,7 +29,7 @@ Both subsections must appear in every section, as follows: <br />
 <br />
 <br />
 
-## Attached Files and Directorys
+## Attached Files and Directories
 - **src** - The directory that contains the complete program.
 - **files_description.txt** - A short explanation about each package, directory and file in the program.
 
