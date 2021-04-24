@@ -1,0 +1,75 @@
+
+=============================
+=     File description   =
+=============================
+Packages:
+filesprocessing - the main package for processing files.
+filesprocessing/filter - sub-package that holds all the files-filters related implementations.
+filesprocessing/order - sub-package that holds all the files-order related implementations.
+filesprocessing/parser - sub-package that holds all the file-parsing related implementations.
+filesprocessing/section - sub-package that holds all the files-sections related implementations.
+sorter - A package that contains sorting implementations.
+toolbox - A package that contains general purpose methods, such as units conversions etc.
+
+                ########## filesprocessing ##########
+DirectoryProcessor.java - Implements the "manager" or "processor" of a directory.
+FileProcessingException.java - Implements General fileProcessing Exception (abstract).
+InvalidUsage.java - Implements an Invalid Usage exception, which is a TypeTwoError exception.
+TypeOneError.java - Implements an TypeOneError exception (for Warnings / not major errors).
+TypeTwoError.java - Implements an TypeTwoError exception (for major errors).
+
+
+filter\AllFilter.java - Implements an AllFilter Class. simply filters all files in the array in.
+filter\BadFilterName.java - Implements a BadFilterName exception for filter. thrown whenever a bad filter and
+                            was given.
+filter\BadNegativeParameters.java - A BadNegativeParameters exception for filter. thrown when negative number
+                                    given.
+filter\BadParameters.java - Implements A general BadParameters exception for filter.
+filter\BadYesNoParameters.java - A BadYesNoParameters exception for filter. Thrown whenever YES or NO are not
+                                 parameters, although expected to be.
+filter\BetweenFilter.java - Implements BetweenFilter class. filters in all files that are between given size.
+filter\ContainsFilter.java - Implements Contain-Name Filter, filter files if they contain a given string.
+filter\ExecutableFilter.java - Implements Executable Filter. filters in all the files that are executable.
+filter\FileFilter.java - Implements a File Filter. Filters files by file's name.
+filter\Filter.java - Implements an abstract class of a Filter.
+filter\FilterFactory.java - Implements Filters Factory, for filters creations.
+filter\GreaterThanFilter.java - Implements a filter that filters in all the files that their size is greater
+                                than a given number.
+filter\HiddenFilter.java - Implements a Hidden-Filter. filters all the hidden files (in or out, according to
+                           given parameter)
+filter\IllegalValuesOrder.java - An IllegalValuesOrder exception. Thrown in ranged filters, when range is not
+                                 a valid range.
+filter\NotFilter.java - Implements A decorator for Filters. returning the complementary array of the
+                        original filter.
+filter\PrefixFilter.java - Implements a Prefix-Name Filter, which filters files if they starts with a given
+                           string.
+filter\SmallerThanFilter.java - Implements SmallerThanFilter class. filters in all the files that their size
+                                is smaller than a given number.
+filter\SuffixFilter.java - A Suffix-Name Filter, which filters files if they end with a given string.
+filter\WritableFilter.java - A Writable Filter. Filters in all the files that are writable.
+
+
+order\AbsOrder.java - An Order object, that order Files according to their absolute path. A singleton.
+order\BadOrderName.java - BadOrderName exception. thrown whenever an invalid order name is given.
+order\Order.java - An Order Abstract class, that implements a comparator.
+order\OrderFactory.java - An OrderFactory. creating order objects according to demand.
+order\ReverseOrder.java - A decorator for Order objects, that reverses their outcome.
+order\SizeOrder.java - An Order object, that order Files according to their size. a singleton
+order\TypeOrder.java - An Order object, that order Files according to their types. A singleton.
+
+
+parser\BadFormatException.java - An exception object, thrown whenever the file is not in the right format.
+parser\BadSubSectionNameException.java - An exception object, thrown when the a SubSection has a wrong name.
+parser\CommandsFileParser.java - A Commands File Parser Object.
+parser\ParsedCommandsFile.java - An already-parsed Commands-Files Object.
+
+section\Section.java - Implements a section class of a commands-files.
+section\SectionFactory.java - Implements a Section Factory, generates sections.
+
+
+                ########## toolbox ##########
+BytesConversions.java - Implements a class that holds bytes conversions methods.
+
+
+                ########## sorter ##########
+MergeSort.java - Implements a mergeSort, At the moment its API has only files-array Sort-method.
